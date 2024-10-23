@@ -8746,10 +8746,30 @@
     <wire from="(980,950)" to="(1000,950)"/>
   </circuit>
   <circuit name="InstructionSplitter">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="InstructionSplitter"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="100" stroke="#000000" width="270" x="50" y="50"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="74" y="99">Instruction</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="292" y="79">ReadReg1</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="292" y="89">ReadReg2</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="294" y="108">WriteReg</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="292" y="128">Immediate</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="290" y="139">ALUControl</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="298" y="59">Control</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="36" text-anchor="middle" x="182" y="81">Instruction</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="36" text-anchor="middle" x="180" y="116">Splitter</text>
+      <circ-anchor facing="east" x="50" y="100"/>
+      <circ-port dir="in" pin="190,120" x="50" y="100"/>
+      <circ-port dir="out" pin="420,390" x="320" y="80"/>
+      <circ-port dir="out" pin="420,450" x="320" y="60"/>
+      <circ-port dir="out" pin="430,340" x="320" y="90"/>
+      <circ-port dir="out" pin="440,290" x="320" y="110"/>
+      <circ-port dir="out" pin="450,240" x="320" y="130"/>
+      <circ-port dir="out" pin="460,80" x="320" y="140"/>
+    </appear>
     <comp lib="1" loc="(190,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Instruction"/>
@@ -8934,5 +8954,84 @@
     <wire from="(420,290)" to="(440,290)"/>
     <wire from="(430,240)" to="(450,240)"/>
     <wire from="(440,80)" to="(460,80)"/>
+  </circuit>
+  <circuit name="RegDstMux">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="RegDstMux"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="60" y="69">0</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="70" y="60">S</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="59" y="109">1</text>
+      <rect fill="none" height="80" stroke="#000000" width="40" x="50" y="50"/>
+      <circ-anchor facing="east" x="90" y="90"/>
+      <circ-port dir="in" pin="220,550" x="70" y="50"/>
+      <circ-port dir="in" pin="240,300" x="50" y="70"/>
+      <circ-port dir="in" pin="240,400" x="50" y="110"/>
+      <circ-port dir="out" pin="450,350" x="90" y="90"/>
+    </appear>
+    <comp lib="1" loc="(220,550)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="RegDst"/>
+    </comp>
+    <comp lib="1" loc="(240,300)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Read"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="1" loc="(240,400)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Write"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="1" loc="(260,500)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+    </comp>
+    <comp lib="1" loc="(450,350)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="RegOut"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="2" loc="(300,340)" name="NOT Gate">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="2" loc="(360,320)" name="AND Gate">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="2" loc="(360,380)" name="AND Gate">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="2" loc="(430,350)" name="OR Gate">
+      <a name="width" val="5"/>
+    </comp>
+    <wire from="(220,550)" to="(230,550)"/>
+    <wire from="(230,510)" to="(230,520)"/>
+    <wire from="(230,510)" to="(240,510)"/>
+    <wire from="(230,520)" to="(230,530)"/>
+    <wire from="(230,520)" to="(240,520)"/>
+    <wire from="(230,530)" to="(230,540)"/>
+    <wire from="(230,530)" to="(240,530)"/>
+    <wire from="(230,540)" to="(230,550)"/>
+    <wire from="(230,540)" to="(240,540)"/>
+    <wire from="(230,550)" to="(240,550)"/>
+    <wire from="(240,300)" to="(310,300)"/>
+    <wire from="(240,400)" to="(310,400)"/>
+    <wire from="(260,340)" to="(260,360)"/>
+    <wire from="(260,340)" to="(270,340)"/>
+    <wire from="(260,360)" to="(260,500)"/>
+    <wire from="(260,360)" to="(310,360)"/>
+    <wire from="(300,340)" to="(310,340)"/>
+    <wire from="(360,320)" to="(370,320)"/>
+    <wire from="(360,380)" to="(370,380)"/>
+    <wire from="(370,320)" to="(370,330)"/>
+    <wire from="(370,330)" to="(380,330)"/>
+    <wire from="(370,370)" to="(370,380)"/>
+    <wire from="(370,370)" to="(380,370)"/>
+    <wire from="(430,350)" to="(450,350)"/>
   </circuit>
 </project>
