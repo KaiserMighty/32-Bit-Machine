@@ -2782,10 +2782,29 @@
     <wire from="(730,140)" to="(750,140)"/>
   </circuit>
   <circuit name="RegistersBlock">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="RegistersBlock"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="70" stroke="#000000" width="260" x="50" y="50"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="36" text-anchor="middle" x="179" y="79">Registers</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="75" y="69">ReadReg1</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="75" y="99">ReadReg2</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="139" y="107">WriteReg</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="220" y="107">WriteData</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="282" y="69">ReadData1</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="281" y="99">ReadData2</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="180" y="60">Clock</text>
+      <circ-anchor facing="east" x="310" y="70"/>
+      <circ-port dir="in" pin="1810,80" x="50" y="70"/>
+      <circ-port dir="in" pin="1820,450" x="50" y="100"/>
+      <circ-port dir="in" pin="190,1190" x="140" y="120"/>
+      <circ-port dir="in" pin="440,40" x="220" y="120"/>
+      <circ-port dir="in" pin="440,80" x="180" y="50"/>
+      <circ-port dir="out" pin="1820,260" x="310" y="70"/>
+      <circ-port dir="out" pin="1820,630" x="310" y="100"/>
+    </appear>
     <comp lib="1" loc="(1810,80)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
