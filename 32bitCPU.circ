@@ -63,7 +63,7 @@
       <a name="facing" val="north"/>
       <a name="size" val="30"/>
     </comp>
-    <comp loc="(1110,560)" name="SignExtender"/>
+    <comp loc="(1060,550)" name="SignExtender"/>
     <comp loc="(1310,170)" name="ShiftLeft2"/>
     <comp loc="(1320,570)" name="ALUControl"/>
     <comp loc="(1330,430)" name="RegistersBlock"/>
@@ -84,7 +84,7 @@
     <wire from="(1040,520)" to="(1170,520)"/>
     <wire from="(1060,440)" to="(1060,460)"/>
     <wire from="(1060,460)" to="(1070,460)"/>
-    <wire from="(1110,560)" to="(1130,560)"/>
+    <wire from="(1060,550)" to="(1130,550)"/>
     <wire from="(1130,200)" to="(1140,200)"/>
     <wire from="(1130,210)" to="(1370,210)"/>
     <wire from="(1130,220)" to="(1590,220)"/>
@@ -92,7 +92,7 @@
     <wire from="(1130,260)" to="(1530,260)"/>
     <wire from="(1130,270)" to="(1150,270)"/>
     <wire from="(1130,280)" to="(1140,280)"/>
-    <wire from="(1130,500)" to="(1130,560)"/>
+    <wire from="(1130,500)" to="(1130,550)"/>
     <wire from="(1130,500)" to="(1340,500)"/>
     <wire from="(1140,180)" to="(1140,200)"/>
     <wire from="(1140,280)" to="(1140,380)"/>
@@ -153,8 +153,8 @@
     <wire from="(870,590)" to="(1180,590)"/>
     <wire from="(880,240)" to="(880,410)"/>
     <wire from="(880,240)" to="(900,240)"/>
-    <wire from="(880,480)" to="(880,560)"/>
-    <wire from="(880,560)" to="(890,560)"/>
+    <wire from="(880,480)" to="(880,550)"/>
+    <wire from="(880,550)" to="(970,550)"/>
     <wire from="(890,140)" to="(1330,140)"/>
     <wire from="(890,180)" to="(1140,180)"/>
     <wire from="(890,180)" to="(890,420)"/>
@@ -9180,11 +9180,11 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="none" height="40" stroke="#000000" width="220" x="50" y="50"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="32" text-anchor="middle" x="159" y="67">Sign-Extender</text>
-      <circ-anchor facing="east" x="270" y="70"/>
-      <circ-port dir="in" pin="120,200" x="50" y="70"/>
-      <circ-port dir="out" pin="220,30" x="270" y="70"/>
+      <rect fill="none" height="20" stroke="#000000" width="90" x="50" y="50"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="96" y="59">Sign-Extender</text>
+      <circ-anchor facing="east" x="140" y="60"/>
+      <circ-port dir="in" pin="120,200" x="50" y="60"/>
+      <circ-port dir="out" pin="220,30" x="140" y="60"/>
     </appear>
     <comp lib="1" loc="(120,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
