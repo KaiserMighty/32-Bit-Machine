@@ -23,6 +23,7 @@
       <a name="size" val="30"/>
     </tool>
   </lib>
+  <lib desc="#Memory" name="3"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -69,6 +70,13 @@
     <comp lib="2" loc="(1540,170)" name="AND Gate">
       <a name="facing" val="north"/>
       <a name="size" val="30"/>
+    </comp>
+    <comp lib="3" loc="(560,570)" name="ROM">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="contents">addr/data: 8 8
+ff
+</a>
+      <a name="label" val="Memory"/>
     </comp>
     <comp loc="(1060,550)" name="SignExtender"/>
     <comp loc="(1310,170)" name="ShiftLeft2"/>
