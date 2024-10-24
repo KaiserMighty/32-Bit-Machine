@@ -54,7 +54,9 @@
       <a name="value" val="0x4"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="1" loc="(820,330)" name="Clock"/>
+    <comp lib="1" loc="(820,310)" name="Clock">
+      <a name="facing" val="south"/>
+    </comp>
     <comp lib="1" loc="(840,170)" name="Constant">
       <a name="facing" val="north"/>
       <a name="value" val="0x2"/>
@@ -78,6 +80,7 @@
     <comp loc="(1530,440)" name="ALU32"/>
     <comp loc="(1610,450)" name="DataMux"/>
     <comp loc="(590,450)" name="InstructionSplitter"/>
+    <comp loc="(660,110)" name="ProgramCounter"/>
     <comp loc="(890,110)" name="ALU32"/>
     <comp loc="(900,240)" name="Control"/>
     <comp loc="(980,490)" name="RegDstMux"/>
@@ -144,9 +147,19 @@
     <wire from="(1590,220)" to="(1590,410)"/>
     <wire from="(1610,450)" to="(1620,450)"/>
     <wire from="(1620,450)" to="(1620,610)"/>
-    <wire from="(490,80)" to="(1560,80)"/>
-    <wire from="(490,80)" to="(490,140)"/>
+    <wire from="(530,110)" to="(540,110)"/>
+    <wire from="(530,150)" to="(670,150)"/>
+    <wire from="(530,80)" to="(1560,80)"/>
+    <wire from="(530,80)" to="(530,110)"/>
+    <wire from="(600,90)" to="(600,100)"/>
+    <wire from="(600,90)" to="(680,90)"/>
+    <wire from="(660,110)" to="(670,110)"/>
+    <wire from="(670,110)" to="(670,150)"/>
+    <wire from="(670,110)" to="(790,110)"/>
+    <wire from="(680,330)" to="(820,330)"/>
+    <wire from="(680,90)" to="(680,330)"/>
     <wire from="(770,140)" to="(790,140)"/>
+    <wire from="(820,310)" to="(820,330)"/>
     <wire from="(820,330)" to="(1190,330)"/>
     <wire from="(840,150)" to="(840,170)"/>
     <wire from="(860,410)" to="(880,410)"/>
