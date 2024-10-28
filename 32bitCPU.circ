@@ -103,8 +103,6 @@
     </comp>
     <comp loc="(880,410)" name="InstructionSplitter"/>
     <comp loc="(950,70)" name="ProgramCounter"/>
-    <wire from="(1010,290)" to="(1010,360)"/>
-    <wire from="(1010,290)" to="(1480,290)"/>
     <wire from="(1060,100)" to="(1080,100)"/>
     <wire from="(1130,110)" to="(1130,130)"/>
     <wire from="(1150,370)" to="(1170,370)"/>
@@ -237,7 +235,7 @@
     <wire from="(950,70)" to="(960,70)"/>
     <wire from="(960,70)" to="(1080,70)"/>
     <wire from="(960,70)" to="(960,220)"/>
-    <wire from="(970,290)" to="(1010,290)"/>
+    <wire from="(970,290)" to="(1480,290)"/>
     <wire from="(970,290)" to="(970,300)"/>
     <wire from="(970,50)" to="(970,290)"/>
   </circuit>
