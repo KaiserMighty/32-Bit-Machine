@@ -20,7 +20,11 @@
       <a name="facing" val="south"/>
     </tool>
     <tool name="AND Gate">
+      <a name="facing" val="north"/>
       <a name="size" val="30"/>
+    </tool>
+    <tool name="OR Gate">
+      <a name="facing" val="north"/>
     </tool>
   </lib>
   <lib desc="#Memory" name="3"/>
@@ -44,9 +48,9 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="1" loc="(1010,550)" name="Pin">
+    <comp lib="1" loc="(1020,250)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
+      <a name="facing" val="south"/>
       <a name="label" val="EOF"/>
       <a name="output" val="true"/>
     </comp>
@@ -58,33 +62,25 @@
       <a name="value" val="0x2"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="1" loc="(1130,80)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="PCoverflow"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp lib="1" loc="(1670,200)" name="Constant">
       <a name="facing" val="north"/>
       <a name="value" val="0x2"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="1" loc="(1670,80)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="JMPoverflow"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp lib="1" loc="(1730,400)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
-      <a name="label" val="ALUoverflow"/>
+      <a name="label" val="Overflow"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="1" loc="(970,350)" name="Clock">
       <a name="facing" val="north"/>
       <a name="labelloc" val="north"/>
       <a name="phaseOffset" val="1"/>
+    </comp>
+    <comp lib="2" loc="(1020,270)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
     </comp>
     <comp lib="2" loc="(1490,400)" name="AND Gate">
       <a name="facing" val="south"/>
@@ -132,10 +128,15 @@
     </comp>
     <comp loc="(880,460)" name="InstructionSplitter"/>
     <comp loc="(950,120)" name="ProgramCounter"/>
-    <wire from="(1010,510)" to="(1010,550)"/>
+    <wire from="(1010,300)" to="(1010,410)"/>
+    <wire from="(1020,250)" to="(1020,270)"/>
+    <wire from="(1030,300)" to="(1030,320)"/>
+    <wire from="(1030,320)" to="(1070,320)"/>
     <wire from="(1060,150)" to="(1080,150)"/>
+    <wire from="(1070,100)" to="(1070,320)"/>
+    <wire from="(1070,100)" to="(1130,100)"/>
+    <wire from="(1130,100)" to="(1130,110)"/>
     <wire from="(1130,160)" to="(1130,180)"/>
-    <wire from="(1130,80)" to="(1130,110)"/>
     <wire from="(1150,420)" to="(1170,420)"/>
     <wire from="(1150,440)" to="(1360,440)"/>
     <wire from="(1150,450)" to="(1190,450)"/>
@@ -229,7 +230,6 @@
     <wire from="(1650,440)" to="(1700,440)"/>
     <wire from="(1670,190)" to="(1670,200)"/>
     <wire from="(1670,230)" to="(1670,450)"/>
-    <wire from="(1670,80)" to="(1670,140)"/>
     <wire from="(1690,490)" to="(1700,490)"/>
     <wire from="(1700,440)" to="(1700,450)"/>
     <wire from="(1700,450)" to="(1720,450)"/>
@@ -9278,7 +9278,7 @@
       <circ-port dir="out" pin="800,290" x="320" y="110"/>
       <circ-port dir="out" pin="810,240" x="320" y="130"/>
       <circ-port dir="out" pin="820,80" x="320" y="140"/>
-      <circ-port dir="out" pin="860,770" x="180" y="150"/>
+      <circ-port dir="out" pin="860,770" x="180" y="50"/>
     </appear>
     <comp lib="1" loc="(220,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
